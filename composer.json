@@ -1,0 +1,6 @@
+{
+    "require": {
+        "aws/aws-sdk-php": "^3.392.0",
+        "cache/apcu-adapter": "^1.3"
+    }
+}
