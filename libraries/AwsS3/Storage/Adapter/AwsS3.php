@@ -65,6 +65,7 @@ class AwsS3_Storage_Adapter_AwsS3 implements Omeka_Storage_Adapter_AdapterInterf
             }
         } finally {
             fclose($stream);
+            unlink($source);
         }
 
         if (!$success) {
