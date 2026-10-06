@@ -65,12 +65,13 @@ class AwsS3_Storage_Adapter_AwsS3 implements Omeka_Storage_Adapter_AdapterInterf
             }
         } finally {
             fclose($stream);
-            unlink($source);
         }
 
         if (!$success) {
             throw new Omeka_Storage_Exception('Unable to store file.');
         }
+
+        unlink($source);
     }
 
     public function move($source, $dest)
